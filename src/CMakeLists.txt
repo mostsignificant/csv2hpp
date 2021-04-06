@@ -1,17 +1,18 @@
-####################################################################################################
+########################################################################################################################
 ### CSV2HPP EXECUTABLE
-####################################################################################################
+########################################################################################################################
 
-set(TARGET csv2hpp)
-
-add_executable(${TARGET}
+add_executable(${CSV2HPP_PROJECT_NAME}
         converter.cpp
         errors.cpp
         main.cpp
-        program_options.cpp)
+        program_options.cpp
+)
 
-target_compile_features(${TARGET} PUBLIC
-        cxx_std_17)
+target_compile_features(${CSV2HPP_PROJECT_NAME} PUBLIC
+        cxx_std_17
+)
 
-target_include_directories(${TARGET} PUBLIC
-        ${CSV2HPP_INC_DIR})
+target_include_directories(${CSV2HPP_PROJECT_NAME} PUBLIC
+        ${CSV2HPP_INC_DIR}
+)
