@@ -47,6 +47,10 @@ matrix:
     dist: bionic
     compiler: clang-9
     env: TOOLSET=clang COMPILER=clang++-9 CXXSTD=17
+    addons:
+      apt:
+        packages:
+          - clang-9
 
 ### OSX + CLANG ########################################################################################################
 
