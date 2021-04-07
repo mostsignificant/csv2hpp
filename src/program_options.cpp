@@ -66,6 +66,7 @@ program_options::program_options(int argc, char** argv) {
 
                 while (--count) _tab += " ";
             } catch (const exception& std_ex) {
+                std_ex.what();  // ignore warning
                 throw po::invalid_tab_spaces_param;
             }
         } else if (option == "--tab-char") {

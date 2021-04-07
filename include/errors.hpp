@@ -8,14 +8,14 @@ namespace errors {
 
 class exception : public std::exception {
 public:
-    exception(const char* message, int64_t code_value);
+    exception(const char* message, int32_t code_value);
 
     virtual const char* what() const noexcept;
-    int64_t             code() const noexcept;
+    int32_t             code() const noexcept;
 
 private:
     const char* message;
-    int64_t     code_value;
+    int32_t     code_value;
 };
 
 namespace program_options {
