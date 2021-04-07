@@ -49,7 +49,7 @@ matrix:
     addons:
       apt:
         sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-8']
-        packages: ['g++-6', 'clang-8']
+        packages: ['clang-9']
 
 ### OSX + GCC ##########################################################################################################
 
