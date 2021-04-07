@@ -45,11 +45,11 @@ matrix:
 
   - os: linux
     compiler: clang
-    env: COMPILER=clang++-3.9
+    env: COMPILER=clang++-5
     addons:
       apt:
         sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-8']
-        packages: ['clang-3.9']
+        packages: ['clang-5']
 
 ### OSX + CLANG ########################################################################################################
 

@@ -9,7 +9,7 @@ add_executable(${CSV2HPP_PROJECT_NAME}
         program_options.cpp
 )
 
-target_compile_features(${CSV2HPP_PROJECT_NAME} PUBLIC
+target_compile_features(${CSV2HPP_PROJECT_NAME} PRIVATE
         cxx_std_17
 )
 
