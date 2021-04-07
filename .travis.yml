@@ -44,12 +44,8 @@ matrix:
 ### LINUX + CLANG ######################################################################################################
 
   - os: linux
+    dist: bionic
     compiler: clang
-    env: COMPILER=clang++-9
-    addons:
-      apt:
-        sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-8']
-        packages: ['clang-9']
 
 ### OSX + CLANG ########################################################################################################
 
