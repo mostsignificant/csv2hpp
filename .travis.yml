@@ -51,24 +51,30 @@ matrix:
         sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-8']
         packages: ['clang-9']
 
-### OSX + GCC ##########################################################################################################
-
-  - os: osx
-    osx_image: xcode11.2
-    compiler: gcc
-
-  - os: osx
-    osx_image: xcode10.2
-    compiler: gcc
-
 ### OSX + CLANG ########################################################################################################
 
   - os: osx
-    osx_image: xcode11.2
+    osx_image: xcode11.4
     compiler: clang
 
   - os: osx
-    osx_image: xcode10.2
+    osx_image: xcode11.5
+    compiler: clang
+
+  - os: osx
+    osx_image: xcode11.6
+    compiler: clang
+
+  - os: osx
+    osx_image: xcode12
+    compiler: clang
+
+  - os: osx
+    osx_image: xcode12u
+    compiler: clang
+
+  - os: osx
+    osx_image: xcode12.2
     compiler: clang
 
 ### WIN + MINGW ########################################################################################################
