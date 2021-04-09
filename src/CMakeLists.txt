@@ -4,7 +4,6 @@
 
 add_executable(${CSV2HPP_PROJECT_NAME}
         converter.cpp
-        errors.cpp
         main.cpp
         program_options.cpp
 )
