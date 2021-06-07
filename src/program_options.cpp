@@ -29,7 +29,7 @@ program_options::program_options(int argc, char** argv) {
         } else if (option == "--cpp-instance-name") {
             if (++i == argc) throw exceptions::program_options::missing_cpp_instance_name_param();
             _cpp_instance_name = std::string_view{argv[i]};
-        } else if (option == "--cpp-container-type") {
+        } else if (option == "--cpp-instance-type") {
             if (++i == argc) throw exceptions::program_options::missing_cpp_instance_type_param();
             _cpp_instance_type = std::string_view{argv[i]};
         } else if (option == "--delimiter-comma") {
