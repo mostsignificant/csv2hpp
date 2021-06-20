@@ -87,6 +87,8 @@ converter::convert(std::istream& input, std::ostream& output, const program_opti
     output << "#include <array>\n";
     output << "#include <string>\n\n";
 
+    if (po.cpp_namespace()) output << "namespace " << po.cpp_namespace() << "{\n\n";
+
     mode parse_mode = po.no_header() ? mode::row : mode::header;
 
     string line;
@@ -102,4 +104,6 @@ converter::convert(std::istream& input, std::ostream& output, const program_opti
     }
 
     output << "};\n";
+
+    if (po.cpp_namespace()) output << "} // namespace " << po.cpp_namespace() << '\n';
 }
