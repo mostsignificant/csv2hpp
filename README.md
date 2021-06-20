@@ -18,8 +18,10 @@ cmake --install .
 The simplest use case is to call csv2hpp with the csv file you want to convert as input:
 
 ```sh
-csv2hpp examples/baseball.csv
+csv2hpp data.csv
 ```
+
+This call will generate a `data.hpp` file with the contents of the csv file to include in your C++ program.
 
 ### Examples
 
