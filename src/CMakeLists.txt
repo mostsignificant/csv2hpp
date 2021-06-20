@@ -15,3 +15,5 @@ target_compile_features(${CSV2HPP_PROJECT_NAME} PRIVATE
 target_include_directories(${CSV2HPP_PROJECT_NAME} PUBLIC
         ${CSV2HPP_INC_DIR}
 )
+
+install(TARGETS ${CSV2HPP_PROJECT_NAME} RUNTIME DESTINATION bin)

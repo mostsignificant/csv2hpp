@@ -18,8 +18,8 @@ public:
 
     std::string_view      cpp_container_name() const noexcept;
     std::string_view      cpp_container_type() const noexcept;
-    std::string_view      cpp_instance_name() const noexcept;
     std::string_view      cpp_instance_type() const noexcept;
+    std::string_view      cpp_namespace() const noexcept;
     std::filesystem::path input_file() const noexcept;
     std::filesystem::path output_file() const noexcept;
     const std::string&    tab() const noexcept;
@@ -32,8 +32,8 @@ private:
     std::filesystem::path _output_file;
     std::string_view      _cpp_container_name;
     std::string_view      _cpp_container_type;
-    std::string_view      _cpp_instance_name;
     std::string_view      _cpp_instance_type;
+    std::string_view      _cpp_namespace;
     std::string           _tab         = "";
     char                  _delimiter   = std::numeric_limits<char>::max();
     bool                  _no_header   = false;

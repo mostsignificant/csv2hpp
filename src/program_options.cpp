@@ -26,12 +26,12 @@ program_options::program_options(int argc, char** argv) {
         } else if (option == "--cpp-container-type") {
             if (++i == argc) throw exceptions::program_options::missing_cpp_container_type_param();
             _cpp_container_type = std::string_view{argv[i]};
-        } else if (option == "--cpp-instance-name") {
-            if (++i == argc) throw exceptions::program_options::missing_cpp_instance_name_param();
-            _cpp_instance_name = std::string_view{argv[i]};
         } else if (option == "--cpp-instance-type") {
             if (++i == argc) throw exceptions::program_options::missing_cpp_instance_type_param();
             _cpp_instance_type = std::string_view{argv[i]};
+        } else if (option == "--cpp-namespace") {
+            if (++i == argc) throw exceptions::program_options::missing_cpp_namespace_name_param();
+            _cpp_namespace = std::string_view{argv[i]};
         } else if (option == "--delimiter-comma") {
             if (_delimiter != std::numeric_limits<char>::max())
                 throw exceptions::program_options::more_than_one_delimiter_param();
@@ -91,7 +91,7 @@ std::string
 program_options::usage() noexcept {
     return "usage: csv2hpp input_file [--output output_file_path] [--delimiter-<comma|semicolon|space|tab>] "
            "[--skip-header|--no-header] [--tab-char|--tab-spaces count] [--cpp-container-name name] "
-           "[--cpp-container-type type]\n";
+           "[--cpp-container-type type] [--cpp-instance-name name] [--cpp-instance-type type] [--cpp-namespace name]\n";
 }
 
 std::string_view
@@ -105,13 +105,13 @@ program_options::cpp_container_type() const noexcept {
 }
 
 std::string_view
-program_options::cpp_instance_name() const noexcept {
-    return _cpp_instance_name;
+program_options::cpp_instance_type() const noexcept {
+    return _cpp_instance_type;
 }
 
 std::string_view
-program_options::cpp_instance_type() const noexcept {
-    return _cpp_instance_type;
+program_options::cpp_namespace() const noexcept {
+    return _cpp_namespace;
 }
 
 std::filesystem::path
