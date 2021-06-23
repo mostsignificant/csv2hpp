@@ -16,7 +16,7 @@ main(int argc, char** argv) -> int {
         std::ofstream output_file(po.output_file().c_str(), std::ios::out);
         if (!output_file) throw exceptions::main::could_not_open_output_file();
 
-        converter::convert(input_file, output_file, po);
+        converter::convert(po, input_file, output_file);
         return 0;
     } catch (const exceptions::exception& ex) {
         std::cerr << "csv2hpp: " << ex.what() << '\n';

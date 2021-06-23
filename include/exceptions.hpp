@@ -5,8 +5,8 @@
 #include <exception>
 
 // clang-format off
-
-#define DEFINE_EXCEPTION(name, text)             \
+// NOLINTNEXTLINE
+#define DEFINE_EXCEPTION(name, text)              \
     struct name : exception {                     \
         const char*                               \
         what() const noexcept override {          \
@@ -14,9 +14,8 @@
         }                                         \
         int64_t code() const noexcept override {  \
             return __COUNTER__;                   \
-        }\
+        }                                         \
     };
-
 // clang-format on
 
 namespace exceptions {
@@ -49,6 +48,13 @@ DEFINE_EXCEPTION(could_not_open_input_file, "could not open input file!")
 DEFINE_EXCEPTION(could_not_open_output_file, "could not open output file!")
 
 }  // namespace main
+
+namespace parsing {
+
+DEFINE_EXCEPTION(could_not_determine_csv_fields, "could not determine csv fields!")
+DEFINE_EXCEPTION(could_not_determine_column_types, "could not determine column types!")
+
+}  // namespace parsing
 
 }  // namespace exceptions
 

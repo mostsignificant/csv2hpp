@@ -1,19 +1,19 @@
 #pragma once
 
+#include <any>
 #include <array>
-#include <string>
+#include <string_view>
 
 struct csv_data_entry{
-    std::string Name;
-    std::string Team;
-    std::string Position;
+    std::string_view Name;
+    std::string_view Team;
+    std::string_view Position;
     int Height;
     int Weight;
-    float Age;
+    double Age;
 };
 
 const std::array csv_data{
-    csv_data_entry{"Adam Donachie", "BAL", "Catcher", 74, 180, 22.99},
     csv_data_entry{"Paul Bako", "BAL", "Catcher", 74, 215, 34.69},
     csv_data_entry{"Ramon Hernandez", "BAL", "Catcher", 72, 210, 30.78},
     csv_data_entry{"Kevin Millar", "BAL", "First Baseman", 72, 210, 35.43},
@@ -1047,4 +1047,6 @@ const std::array csv_data{
     csv_data_entry{"Chris Narveson", "STL", "Relief Pitcher", 75, 205, 25.19},
     csv_data_entry{"Randy Keisler", "STL", "Relief Pitcher", 75, 190, 31.01},
     csv_data_entry{"Josh Kinney", "STL", "Relief Pitcher", 73, 195, 27.92},
+    csv_data_entry{"},
 };
+

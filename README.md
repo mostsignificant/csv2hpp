@@ -23,6 +23,14 @@ csv2hpp data.csv
 
 This call will generate a `data.hpp` file with the contents of the csv file to include in your C++ program.
 
+The tool will generate a sruct for each entry with fields for the cell data. The types of these fields can be determined
+within brackets in the header cell. It defaults to std::any if it cannot be determined.
+
+`".*"` -> std::string
+`[0-9]+` -> int
+`[0-9]+\.[0-9]*` -> double
+
+
 ### Examples
 
 The folder `examples` contains different csv files to try. The `baseball.csv` contains baseball data looking like this:

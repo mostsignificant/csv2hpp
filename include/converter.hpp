@@ -8,7 +8,7 @@ class program_options;
 
 namespace converter {
 
-void convert(std::istream& input, std::ostream& output, const program_options& po);
+void convert(const program_options& po, std::istream& in, std::ostream& out);
 
 }  // namespace converter
 
